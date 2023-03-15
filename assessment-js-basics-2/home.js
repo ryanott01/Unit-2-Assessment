@@ -20,12 +20,11 @@
     argument, `greetUser` should return the string:
     'Welcome back, Andrew'
 */
-Username = `Ryan`
-function greetUser(Username){
-    var greet
-    return greet = `Welcome back, ${Username}`
+const greetUser = (username) => {
+    return `Welcome back, ${username}`;
 };
-console.log(greetUser(Username))
+console.log(greetUser('Ryan'));
+
 //////////////////PROBLEM 2////////////////////
 /* 
     Below is an array of zip codes that are in
@@ -46,13 +45,17 @@ console.log(greetUser(Username))
         // `You're in our delivery zone!`
 */
 
-const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
-function canWeDeliver(zipCode){
-for (i = 0; i < deliveryAreaZipCodes; i++)
-var deliv
-    if (deliveryAreaZipCodes[i]){return deliv = `You're in our delivery zone`}
-    else {return deliv = `Sorry, We cannot deliver to that address`};
+const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206];
+
+function canWeDeliver(zipCode) {
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if (deliveryAreaZipCodes[i] === zipCode) {
+            return "You're in our delivery zone!";
+        }
+    }
+    return "Sorry, we can't deliver to that address";
 }
+
 /* 
     Problem 2 Continued
 
@@ -69,12 +72,14 @@ var deliv
     loop (for loop, higher order array method).
     Name your new function `canWeDeliverTwo`.
 */
-
-function canWeDeliver(zipCode){
-    var deliv
-        if (canWeDeliver.includes(85205|| 85204|| 85203|| 85213|| 85206)){return deliv = `You're in our delivery zone`}
-        else {return deliv = `Sorry, We cannot deliver to that address`};
+function canWeDeliverTwo(zipCode) {
+    if (deliveryAreaZipCodes.includes(zipCode)) {
+        return "You're in our delivery zone!";
+    } else {
+        return "Sorry, we can't deliver to that address";
+    }
 }
+
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -98,7 +103,8 @@ const deals = [
         title: 'Free Kids Meal with 2 Regular Entrees', 
         desc: '   This deal lasts until the end of March! '
     }
-]
+];
+
 
 /*
     The owner has decided to take the 15% off
@@ -108,7 +114,7 @@ const deals = [
     to be itself, but use the `replace` method
     to replace the 15 with a 10.
 */
-
+deals[0].title = deals[0].title.replace('15', '10');
 
 
 
@@ -127,4 +133,6 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+deals[1].desc = deals[1].desc.replace('March', 'April').trim();
+
+console.log(deals);
