@@ -20,12 +20,18 @@
 */
 
 class Employee {
-    constructor(name, shift){
-   Employee.getschedule(
-    console.log(`${name} works on ${shift}`)
-   )
+    constructor(name, shifts) {
+        this.name = name;
+        this.shifts = shifts;
+    }
+
+    getSchedule() {
+        console.log(`${this.name} works on ${this.shifts}`);
     }
 }
+
+
+
 
 
 
@@ -40,9 +46,8 @@ class Employee {
     shifts: weekday mornings, weekday afternoons
 */
 
-var empOne = {
-    name: 'Jess';
-    Shift: 'weekday mornings, weekday afternoons';
+const empOne = new Employee('Jess', 'weekday mornings, weekday afternoons');
+
 }
 
 /*
@@ -50,7 +55,7 @@ var empOne = {
     `empOne` object.
 */
 
-//CODE HERE
+empOne.getSchedule();
 
 
 /*
@@ -65,7 +70,11 @@ var empOne = {
     dot or bracket notation.
 */
 
-//CODE HERE
+const empTwo = {
+    ...empOne,
+    name: 'Nick'
+};
+
 
 
 
@@ -92,7 +101,25 @@ var empOne = {
     the employees array. 
 */
 
-//CODE HERE
+class Manager extends Employee {
+    constructor(name, shifts, employees) {
+        super(name, shifts);
+        this.employees = employees;
+    }
+
+    getEmployees() {
+        console.log(`${this.name} manages ${this.employees}`);
+    }
+
+    addEmployee(emp) {
+        this.employees.push(emp);
+    }
+}
+
+const manager = new Manager('Winston', 'weekday mornings, weekday afternoons', ['Cece', 'Schmidt']);
+manager.getEmployees();
+manager.addEmployee('Coach');
+manager.getEmployees();
 
 
 
@@ -107,7 +134,8 @@ var empOne = {
     employees: Cece and Schmidt
 */
 
-//CODE HERE
+const manager = new Manager('Winston', 'weekday mornings, weekday afternoons', ['Cece', 'Schmidt']);
+
 
 
 /*
@@ -115,7 +143,7 @@ var empOne = {
     `manager` object.  
 */
 
-//CODE HERE
+manager.getEmployees();
 
 /*
     Call the `addEmployee` method on the 
@@ -123,7 +151,8 @@ var empOne = {
     'Coach' or whatever name you'd like.
 */
 
-//CODE HERE 
+manager.addEmployee('Coach');
+
 
 /*
     Call the `getEmployees` method on the
@@ -131,4 +160,4 @@ var empOne = {
     that an employee was added.
 */
 
-//CODE HERE
+manager.addEmployee('Coach');
