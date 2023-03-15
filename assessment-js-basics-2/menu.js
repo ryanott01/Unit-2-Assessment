@@ -30,15 +30,15 @@
     'kids'
 */
 
-let pizza ={
-    name: `Pepperoni`,
+let pizza = {
+    name: 'Pepperoni',
     price: 10,
-    Category: `Basic`,
-    Popularity: 10,
-    Rating: 9,
-    tags: [`Not gluten Free`,`Not diary`,`hot n' ready`]
+    category: 'Basic',
+    popularity: 10,
+    rating: 9,
+    tags: ['Not gluten Free', 'Not diary', "hot n' ready"]
+};
 
-}
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -48,7 +48,7 @@ let pizza ={
     Use dot notation to access the value.
 */
 
-console.log(pizza.Popularity)
+console.log(pizza.popularity)
 
 
 /*
@@ -58,7 +58,7 @@ console.log(pizza.Popularity)
     get the value.
 */
 
-console.log(pizza.tags[2])
+console.log(pizza.tags[1])
 
 
 /*
@@ -68,7 +68,8 @@ console.log(pizza.tags[2])
     Print the value of your new price variable.
 */
 
-//CODE HERE
+const { price } = pizza;
+console.log(price);
 
 
 /*
@@ -78,7 +79,8 @@ console.log(pizza.tags[2])
     Print the value of your category variable. 
 */
 
-
+const { category } = pizza;
+console.log(category);
 
 
 //////////////////PROBLEM 3////////////////////
@@ -93,55 +95,50 @@ console.log(pizza.tags[2])
     data in some functions that you'll write.
 */
 
-let foodArr = []
-     let pizza2 ={
-        name: `Pepperoni pizza`,
+let foodArr = [
+    {
+        name: 'Pepperoni Pizza',
         price: 10,
-        Category: `Fresh from the oven`,
-        Popularity: 9,
-        Rating: 9,
-        tags: [`Not gluten Free`,`not diary free`]
-     }
-     foodArr.push(pizza2)
-     let burger ={
-        name: `Burger`,
+        category: 'Fresh from the oven'
+        popularity: 9,
+        rating: 9,
+        tags: ['Not gluten Free', 'not diary free']
+    },
+    {
+        name: 'Burger',
         price: 11,
-        Category: `Grilled beef patty`,
-        Popularity: 10,
-        Rating: 10,
-        tags: [`Not gluten Free`,`not diary free`,`toppings`]
-     }
-    foodArr.push(burger)
-    
-     let pasta ={
-        name: `Alfredo`,
+        category: 'Grilled beef patty',
+        popularity: 10,
+        rating: 10,
+        tags: ['Not gluten Free', 'not diary free', 'toppings']
+    },
+    {
+        name: 'Alfredo',
         price: 13,
-        Category: `Creamy white sauce`,
-        Popularity: 8,
-        Rating: 10,
-        tags: [`Not gluten Free`,`not diary free`]
-     }
-        foodArr.push(pasta)
-    
-    
-     soup ={
-        name: `chicken noodle soup`,
+        category: 'Creamy white sauce',
+        popularity: 8,
+        rating: 10,
+        tags: ['Not gluten Free', 'not diary free']
+    },
+    {
+        name: 'Chicken Noodle Soup',
         price: 8,
-        Category: `classic recipe`,
-        Popularity: 6,
-        Rating: 7,
-        tags: [`Not gluten Free`,`Diary Free`,`Lunch special`]
-    }
-foodArr.push(soup)
-     Sub ={
-        name: `Italian Sub`,
+        category: 'Classic recipe',
+        popularity: 6,
+        rating: 7,
+        tags: ['Not gluten Free', 'Diary Free', 'Lunch special']
+    },
+    {
+        name: 'Italian Sub',
         price: 10,
-        Category: `Classic Italian sub`,
-        Popularity: 10,
-        Rating: 9,
-        tags: [`Not gluten Free`,`not diary free`]
+        category: 'Classic Italian sub',
+        popularity: 10,
+        rating: 9,
+        tags: ['Not gluten Free', 'not diary free']
     }
-    foodArr.push(soup)
+];
+
+
 
 
 
